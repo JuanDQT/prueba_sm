@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,8 @@
 		0DCB5EAD261644BF0065A9D0 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCB5EAB261644BF0065A9D0 /* Main.storyboard */; };
 		0DCB5EAF261644C00065A9D0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0DCB5EAE261644C00065A9D0 /* Assets.xcassets */; };
 		0DCB5EB2261644C00065A9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCB5EB0261644C00065A9D0 /* LaunchScreen.storyboard */; };
+		0DCB5EBC261647F60065A9D0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0DCB5EBB261647F60065A9D0 /* Alamofire */; };
+		0DCB5EC326164B330065A9D0 /* MyCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB5EC226164B330065A9D0 /* MyCellController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +26,7 @@
 		0DCB5EAE261644C00065A9D0 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		0DCB5EB1261644C00065A9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DCB5EB3261644C00065A9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		0DCB5EC226164B330065A9D0 /* MyCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +34,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				0DCB5EBC261647F60065A9D0 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,15 +60,24 @@
 		0DCB5EA4261644BF0065A9D0 /* PruebaSM */ = {
 			isa = PBXGroup;
 			children = (
+				0DCB5EC126164B100065A9D0 /* controllers */,
 				0DCB5EA5261644BF0065A9D0 /* AppDelegate.swift */,
 				0DCB5EA7261644BF0065A9D0 /* SceneDelegate.swift */,
-				0DCB5EA9261644BF0065A9D0 /* ViewController.swift */,
 				0DCB5EAB261644BF0065A9D0 /* Main.storyboard */,
 				0DCB5EAE261644C00065A9D0 /* Assets.xcassets */,
 				0DCB5EB0261644C00065A9D0 /* LaunchScreen.storyboard */,
 				0DCB5EB3261644C00065A9D0 /* Info.plist */,
 			);
 			path = PruebaSM;
+			sourceTree = "<group>";
+		};
+		0DCB5EC126164B100065A9D0 /* controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0DCB5EC226164B330065A9D0 /* MyCellController.swift */,
+				0DCB5EA9261644BF0065A9D0 /* ViewController.swift */,
+			);
+			path = controllers;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -83,6 +96,9 @@
 			dependencies = (
 			);
 			name = PruebaSM;
+			packageProductDependencies = (
+				0DCB5EBB261647F60065A9D0 /* Alamofire */,
+			);
 			productName = PruebaSM;
 			productReference = 0DCB5EA2261644BF0065A9D0 /* PruebaSM.app */;
 			productType = "com.apple.product-type.application";
@@ -110,6 +126,10 @@
 				Base,
 			);
 			mainGroup = 0DCB5E99261644BF0065A9D0;
+			packageReferences = (
+				0DCB5EBA261647F60065A9D0 /* XCRemoteSwiftPackageReference "Alamofire" */,
+				0DCB5EBE261648C20065A9D0 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
+			);
 			productRefGroup = 0DCB5EA3261644BF0065A9D0 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -140,6 +160,7 @@
 				0DCB5EAA261644BF0065A9D0 /* ViewController.swift in Sources */,
 				0DCB5EA6261644BF0065A9D0 /* AppDelegate.swift in Sources */,
 				0DCB5EA8261644BF0065A9D0 /* SceneDelegate.swift in Sources */,
+				0DCB5EC326164B330065A9D0 /* MyCellController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +362,33 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		0DCB5EBA261647F60065A9D0 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.4.1;
+			};
+		};
+		0DCB5EBE261648C20065A9D0 /* XCRemoteSwiftPackageReference "realm-cocoa" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/realm/realm-cocoa";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.7.2;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		0DCB5EBB261647F60065A9D0 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0DCB5EBA261647F60065A9D0 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 0DCB5E9A261644BF0065A9D0 /* Project object */;
 }
