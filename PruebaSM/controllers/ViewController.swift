@@ -6,23 +6,45 @@
 //
 
 import UIKit
+import Kingfisher
 
 class ViewController: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    @IBOutlet weak var loading: UIActivityIndicatorView!
+    @IBOutlet weak var lblNoData: UILabel!
     
     // Vars
-    var dataList: [Data]?
+    var dataList: [Group]?
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         tableView.delegate = self
         tableView.dataSource = self
+        
+        NotificationCenter.default.addObserver(self, selector: #selector(responseGroups(_:)), name: Notification.Name(rawValue: "GET_GROUPS"), object: nil)
+        
+            
+        doRefresh((Any).self)
+        
     }
 
+    @objc func responseGroups(_ notification: Notification) {
+        let data = notification.userInfo as! [String: [Group]]
+        DispatchQueue.main.async {
+            self.dataList = data["items"]
+                  self.tableView.reloadData()
+        }
+    }
+    @IBAction func doRefresh(_ sender: Any) {
+        if(!Connectivity.isConnectedToInternet()) {return}
 
+        lblNoData.isHidden = true
+        tableView.isHidden = false
+        SyncData().getGroups()
+    }
+    
 }
+
+
 
 // MARK: - Extensions, Delegates
 extension ViewController: UITableViewDataSource {
@@ -31,12 +53,25 @@ extension ViewController: UITableViewDataSource {
     
     let cell = tableView.dequeueReusableCell(withIdentifier: "CELL_ID", for: indexPath) as! MyCellController
 
-    if let items = dataList {
-        cell.name.text = items[indexPath.row].name
-        cell.age.text = items[indexPath.row].getAge()
-        if let img = items[indexPath.row].image {
-            cell.picture.kf.setImage(with: URL(string: img))
+    if let items = dataList, let img = items[indexPath.row].defaultImageUrl {
+        cell.ivBackground.kf.setImage(with: URL(string: img)) {_ in
+            cell.setNeedsLayout()
+            
+            UIView.performWithoutAnimation {
+                                tableView.beginUpdates()
+                                tableView.endUpdates()
+                            }
         }
+        cell.lblName.sizeToFit()
+        cell.lblName.adjustsFontSizeToFitWidth = true
+        cell.lblName.minimumScaleFactor = 0.5
+        cell.lblName.text = items[indexPath.row].name
+
+        //cell.lblName.sizeToFit()
+//        cell.age.text = items[indexPath.row].getAge()
+//        if let img = items[indexPath.row].image {
+//            cell.picture.kf.setImage(with: URL(string: img))
+//        }
     }
     return cell
 
@@ -53,7 +88,7 @@ extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
     if let items = dataList {
-        performSegue(withIdentifier: "GO_DETALL_CONTROLLER", sender: items[indexPath.row].id)
+        //performSegue(withIdentifier: "GO_DETALL_CONTROLLER", sender: items[indexPath.row].id)
     }
   }
 }
