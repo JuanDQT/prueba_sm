@@ -26,4 +26,19 @@ extension UIViewController {
     func isConnectedToInternet() -> Bool {
         return NetworkReachabilityManager()!.isReachable
     }
+    
+    
+}
+
+extension Int {
+
+    func toStringDate() -> String {
+        let truncatedTime = Int(self / 1000)
+        let date = Date(timeIntervalSince1970: TimeInterval(truncatedTime))
+        let formatter = DateFormatter()
+        formatter.timeZone = TimeZone(abbreviation: "UTC")
+        formatter.dateFormat = "dd/MM/yyyy"
+        //formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSS'Z'"
+        return formatter.string(from: date)
+    }
 }

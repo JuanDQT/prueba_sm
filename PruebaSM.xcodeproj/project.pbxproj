@@ -109,6 +109,7 @@
 		0DCB5EC126164B100065A9D0 /* controllers */ = {
 			isa = PBXGroup;
 			children = (
+				0DE6F04D261B9E25000C4B5C /* MyUIViewController.swift */,
 				0DCB5EC226164B330065A9D0 /* MyCellController.swift */,
 				0DCB5EA9261644BF0065A9D0 /* ViewController.swift */,
 			);
@@ -119,7 +120,6 @@
 			isa = PBXGroup;
 			children = (
 				0DE6F045261B889D000C4B5C /* Extensions.swift */,
-				0DE6F04D261B9E25000C4B5C /* MyUIViewController.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";

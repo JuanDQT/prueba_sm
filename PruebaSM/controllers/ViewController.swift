@@ -44,12 +44,7 @@ class ViewController: MyUIViewController {
         if(!isConnectedToInternet()) {return}
 
         showLoadingAlert(value: true)
-        
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-
-            SyncData().getGroups()
-        }
-
+        SyncData().getGroups()
     }
     
 }
@@ -76,6 +71,11 @@ extension ViewController: UITableViewDataSource {
         cell.lblName.adjustsFontSizeToFitWidth = true
         cell.lblName.minimumScaleFactor = 0.5
         cell.lblName.text = items[indexPath.row].name
+        let date = items[indexPath.row].date.toStringDate()
+        cell.lblFecha.text = date
+        if let description = items[indexPath.row].descriptionShort {
+            cell.lblDescription.text = description
+        }
 
         //cell.lblName.sizeToFit()
 //        cell.age.text = items[indexPath.row].getAge()

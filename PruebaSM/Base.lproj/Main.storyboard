@@ -33,11 +33,35 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6OE-PZ-Aef">
                                                     <rect key="frame" x="10" y="10" width="394" height="230"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" fixedFrame="YES" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="emQ-9A-AKG">
-                                                            <rect key="frame" x="0.0" y="0.0" width="102" height="21"/>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="fK2-Xw-Ud7" userLabel="stack_short_description">
+                                                            <rect key="frame" x="0.0" y="209.5" width="394" height="20.5"/>
                                                             <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="150" text="Labelfdfdfsdf" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u8-ZT-vBc">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="102" height="21"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Descripcion" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gw0-AJ-RM9">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="394" height="20.5"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                            <color key="backgroundColor" red="0.61676772229999999" green="0.64935431889999995" blue="0.77095965280000001" alpha="0.60190264270000005" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="KqP-t0-uxt" userLabel="stack_fecha">
+                                                            <rect key="frame" x="347.5" y="0.0" width="46.5" height="20.5"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Fecha" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="h6e-kD-VsZ">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="46.5" height="20.5"/>
+                                                                    <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="0.47391909160000001" colorSpace="custom" customColorSpace="sRGB"/>
+                                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                                    <nil key="textColor"/>
+                                                                    <nil key="highlightedColor"/>
+                                                                </label>
+                                                            </subviews>
+                                                        </stackView>
+                                                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" translatesAutoresizingMaskIntoConstraints="NO" id="emQ-9A-AKG" userLabel="stack_name">
+                                                            <rect key="frame" x="0.0" y="0.0" width="42.5" height="21"/>
+                                                            <subviews>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="150" text="name" textAlignment="natural" lineBreakMode="wordWrap" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7u8-ZT-vBc">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="42.5" height="21"/>
                                                                     <color key="backgroundColor" red="0.9999127984046936" green="1" blue="0.99988144636154175" alpha="0.47391909163519247" colorSpace="custom" customColorSpace="sRGB"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" constant="21" id="hEF-Fq-8kD"/>
@@ -49,6 +73,15 @@
                                                             </subviews>
                                                         </stackView>
                                                     </subviews>
+                                                    <constraints>
+                                                        <constraint firstAttribute="trailing" secondItem="KqP-t0-uxt" secondAttribute="trailing" id="4N6-fO-K1i"/>
+                                                        <constraint firstItem="emQ-9A-AKG" firstAttribute="top" secondItem="6OE-PZ-Aef" secondAttribute="top" id="EKm-44-qik"/>
+                                                        <constraint firstItem="KqP-t0-uxt" firstAttribute="top" secondItem="6OE-PZ-Aef" secondAttribute="top" id="PyQ-V1-H5r"/>
+                                                        <constraint firstItem="emQ-9A-AKG" firstAttribute="leading" secondItem="6OE-PZ-Aef" secondAttribute="leading" id="eBN-R8-hJE"/>
+                                                        <constraint firstItem="fK2-Xw-Ud7" firstAttribute="leading" secondItem="6OE-PZ-Aef" secondAttribute="leading" id="lbq-wU-u5z"/>
+                                                        <constraint firstAttribute="trailing" secondItem="fK2-Xw-Ud7" secondAttribute="trailing" id="xTy-7S-IMf"/>
+                                                        <constraint firstAttribute="bottom" secondItem="fK2-Xw-Ud7" secondAttribute="bottom" id="ylz-Zg-OtK"/>
+                                                    </constraints>
                                                 </view>
                                             </subviews>
                                             <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
@@ -66,6 +99,8 @@
                                         <edgeInsets key="layoutMargins" top="8" left="8" bottom="8" right="8"/>
                                         <connections>
                                             <outlet property="ivBackground" destination="OGq-YO-mJE" id="hb3-kd-tjH"/>
+                                            <outlet property="lblDescription" destination="Gw0-AJ-RM9" id="mbP-pf-hPS"/>
+                                            <outlet property="lblFecha" destination="h6e-kD-VsZ" id="gqy-K6-pW3"/>
                                             <outlet property="lblName" destination="7u8-ZT-vBc" id="kgS-u6-H5I"/>
                                         </connections>
                                     </tableViewCell>
