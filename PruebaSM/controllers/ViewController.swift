@@ -47,6 +47,14 @@ class ViewController: MyUIViewController {
         SyncData().getGroups()
     }
     
+    // MARK: Prepare to go next controller
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GO_GROUP_CONTROLLER" {
+
+            let controller = segue.destination as! GroupViewController
+            controller.group = sender as? Group
+        }
+    }
 }
 
 
@@ -67,21 +75,13 @@ extension ViewController: UITableViewDataSource {
                                 tableView.endUpdates()
                             }
         }
-        cell.lblName.sizeToFit()
-        cell.lblName.adjustsFontSizeToFitWidth = true
-        cell.lblName.minimumScaleFactor = 0.5
+
         cell.lblName.text = items[indexPath.row].name
         let date = items[indexPath.row].date.toStringDate()
         cell.lblFecha.text = date
         if let description = items[indexPath.row].descriptionShort {
             cell.lblDescription.text = description
         }
-
-        //cell.lblName.sizeToFit()
-//        cell.age.text = items[indexPath.row].getAge()
-//        if let img = items[indexPath.row].image {
-//            cell.picture.kf.setImage(with: URL(string: img))
-//        }
     }
     return cell
 
@@ -98,7 +98,8 @@ extension ViewController: UITableViewDelegate {
   func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
 
     if let items = dataList {
-        //performSegue(withIdentifier: "GO_DETALL_CONTROLLER", sender: items[indexPath.row].id)
+        performSegue(withIdentifier: "GO_GROUP_CONTROLLER", sender: dataList![indexPath.row])
+
     }
   }
 }
