@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class ViewController: UIViewController {
+class ViewController: MyUIViewController {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblNoData: UILabel!
     
@@ -29,17 +29,27 @@ class ViewController: UIViewController {
 
     @objc func responseGroups(_ notification: Notification) {
         let data = notification.userInfo as! [String: [Group]]
+        
+        self.lblNoData.isHidden = true
+        self.tableView.isHidden = false
+        showLoadingAlert(value: false)
+
         DispatchQueue.main.async {
             self.dataList = data["items"]
                   self.tableView.reloadData()
         }
     }
+    
     @IBAction func doRefresh(_ sender: Any) {
-        if(!Connectivity.isConnectedToInternet()) {return}
+        if(!isConnectedToInternet()) {return}
 
-        lblNoData.isHidden = true
-        tableView.isHidden = false
-        SyncData().getGroups()
+        showLoadingAlert(value: true)
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+
+            SyncData().getGroups()
+        }
+
     }
     
 }

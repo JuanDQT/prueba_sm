@@ -20,8 +20,9 @@
 		0DCB5EB2261644C00065A9D0 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0DCB5EB0261644C00065A9D0 /* LaunchScreen.storyboard */; };
 		0DCB5EBC261647F60065A9D0 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = 0DCB5EBB261647F60065A9D0 /* Alamofire */; };
 		0DCB5EC326164B330065A9D0 /* MyCellController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DCB5EC226164B330065A9D0 /* MyCellController.swift */; };
-		0DE6F046261B889D000C4B5C /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6F045261B889D000C4B5C /* Tools.swift */; };
+		0DE6F046261B889D000C4B5C /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6F045261B889D000C4B5C /* Extensions.swift */; };
 		0DE6F04B261B8DA8000C4B5C /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0DE6F04A261B8DA8000C4B5C /* Kingfisher */; };
+		0DE6F04E261B9E25000C4B5C /* MyUIViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0DE6F04D261B9E25000C4B5C /* MyUIViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,7 +37,8 @@
 		0DCB5EB1261644C00065A9D0 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0DCB5EB3261644C00065A9D0 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0DCB5EC226164B330065A9D0 /* MyCellController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyCellController.swift; sourceTree = "<group>"; };
-		0DE6F045261B889D000C4B5C /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		0DE6F045261B889D000C4B5C /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		0DE6F04D261B9E25000C4B5C /* MyUIViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyUIViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -116,7 +118,8 @@
 		0DE6F044261B8892000C4B5C /* tools */ = {
 			isa = PBXGroup;
 			children = (
-				0DE6F045261B889D000C4B5C /* Tools.swift */,
+				0DE6F045261B889D000C4B5C /* Extensions.swift */,
+				0DE6F04D261B9E25000C4B5C /* MyUIViewController.swift */,
 			);
 			path = tools;
 			sourceTree = "<group>";
@@ -208,8 +211,9 @@
 				0D861C0026170CFD00CAA986 /* SyncData.swift in Sources */,
 				0DCB5EA6261644BF0065A9D0 /* AppDelegate.swift in Sources */,
 				0DCB5EA8261644BF0065A9D0 /* SceneDelegate.swift in Sources */,
-				0DE6F046261B889D000C4B5C /* Tools.swift in Sources */,
+				0DE6F046261B889D000C4B5C /* Extensions.swift in Sources */,
 				0DCB5EC326164B330065A9D0 /* MyCellController.swift in Sources */,
+				0DE6F04E261B9E25000C4B5C /* MyUIViewController.swift in Sources */,
 				0D9CBC77261B6F1100301272 /* Group.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
