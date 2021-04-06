@@ -69,6 +69,8 @@ class SyncData {
         let realm = try! Realm()
         
         let items = realm.objects(Group.self).filter("saved = %@", 1)
-        NotificationCenter.default.post(name: Notification.Name(rawValue: "GET_FAVS"), object: nil, userInfo: ["items": Array(items)])
+        if(items.count > 0) {
+            NotificationCenter.default.post(name: Notification.Name(rawValue: "GET_FAVS"), object: nil, userInfo: ["items": Array(items)])
+        }
     }
 }

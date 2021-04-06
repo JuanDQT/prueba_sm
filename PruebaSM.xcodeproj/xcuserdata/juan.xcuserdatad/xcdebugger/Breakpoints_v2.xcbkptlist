@@ -100,7 +100,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "88430F63-FE52-4BF5-9BC8-57CBAF1D8D08 - 807d7f5dd5896c48"
+                  uuid = "88430F63-FE52-4BF5-9BC8-57CBAF1D8D08 - 807d7f5dd5896c8a"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -110,12 +110,12 @@
                   urlString = "file:///Users/juan/AppProjects/iOSProjects/PruebaSM/PruebaSM/controllers/GroupViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "76"
-                  endingLineNumber = "76"
+                  startingLineNumber = "78"
+                  endingLineNumber = "78"
                   offsetFromSymbolStart = "851">
                </Location>
                <Location
-                  uuid = "88430F63-FE52-4BF5-9BC8-57CBAF1D8D08 - 20e1fffc93ddb867"
+                  uuid = "88430F63-FE52-4BF5-9BC8-57CBAF1D8D08 - 20e1fffc93ddb839"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -125,8 +125,8 @@
                   urlString = "file:///Users/juan/AppProjects/iOSProjects/PruebaSM/PruebaSM/controllers/GroupViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "77"
-                  endingLineNumber = "77"
+                  startingLineNumber = "79"
+                  endingLineNumber = "79"
                   offsetFromSymbolStart = "34">
                </Location>
             </Locations>
@@ -344,14 +344,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "FDD4EB8D-A4FC-4E8D-82E9-B00D94611030"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "PruebaSM/network/SyncData.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "72"
-            endingLineNumber = "72"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "getFavs()"
             landmarkType = "7">
          </BreakpointContent>
