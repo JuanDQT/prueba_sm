@@ -11,12 +11,30 @@
         }
       },
       {
+        "package": "AlamofireImage",
+        "repositoryURL": "https://github.com/Alamofire/AlamofireImage.git",
+        "state": {
+          "branch": null,
+          "revision": "98cbb00ce0ec5fc8e52a5b50a6bfc08d3e5aee10",
+          "version": "4.2.0"
+        }
+      },
+      {
+        "package": "ImageSlideshow",
+        "repositoryURL": "https://github.com/zvonicek/ImageSlideshow",
+        "state": {
+          "branch": null,
+          "revision": "a54e24d47944a1ca84c2a7bf03cb435425a9929d",
+          "version": "1.9.2"
+        }
+      },
+      {
         "package": "Kingfisher",
         "repositoryURL": "https://github.com/onevcat/Kingfisher",
         "state": {
           "branch": null,
-          "revision": "bbc4bc4def7eb05a7ba8e1219f80ee9be327334e",
-          "version": "6.2.1"
+          "revision": "2a10bf41da75599a9f8e872dbd44fe0155a2e00c",
+          "version": "5.15.8"
         }
       },
       {
@@ -35,6 +53,15 @@
           "branch": null,
           "revision": "bab46acdca91c417a0d4849b8f4992a3c17e29a5",
           "version": "10.5.5"
+        }
+      },
+      {
+        "package": "SDWebImage",
+        "repositoryURL": "https://github.com/SDWebImage/SDWebImage.git",
+        "state": {
+          "branch": null,
+          "revision": "d1c75d839709b3f91c82ecf7d3c7665272090456",
+          "version": "5.11.0"
         }
       },
       {

@@ -26,12 +26,11 @@ extension UIViewController {
     func isConnectedToInternet() -> Bool {
         return NetworkReachabilityManager()!.isReachable
     }
-    
-    
 }
 
 extension Int {
 
+    // Recibimos fecha en formato legible
     func toStringDate() -> String {
         let truncatedTime = Int(self / 1000)
         let date = Date(timeIntervalSince1970: TimeInterval(truncatedTime))

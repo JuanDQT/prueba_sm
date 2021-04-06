@@ -8,6 +8,7 @@
 import UIKit
 import Kingfisher
 
+// Controlador categorias guardadas, muy parecida al ViewController.
 class FavViewController: MyUIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblNoData: UILabel!

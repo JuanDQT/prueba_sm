@@ -9,6 +9,9 @@
 /* Begin PBXBuildFile section */
 		0D3FE4E3261BB30100DE0EF4 /* GroupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D3FE4E2261BB30100DE0EF4 /* GroupViewController.swift */; };
 		0D5D0408261CF61600B6CC1A /* FavViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D0407261CF61600B6CC1A /* FavViewController.swift */; };
+		0D5D040D261CFD0600B6CC1A /* ImageSlideshow/Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 0D5D040C261CFD0600B6CC1A /* ImageSlideshow/Kingfisher */; };
+		0D5D040F261CFD0600B6CC1A /* ImageSlideshow in Frameworks */ = {isa = PBXBuildFile; productRef = 0D5D040E261CFD0600B6CC1A /* ImageSlideshow */; };
+		0D5D0412261CFDBE00B6CC1A /* ImageSliderController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D5D0411261CFDBE00B6CC1A /* ImageSliderController.swift */; };
 		0D861C0026170CFD00CAA986 /* SyncData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D861BFF26170CFD00CAA986 /* SyncData.swift */; };
 		0D861C0426170F0A00CAA986 /* SwiftyJSON in Frameworks */ = {isa = PBXBuildFile; productRef = 0D861C0326170F0A00CAA986 /* SwiftyJSON */; };
 		0D9CBC77261B6F1100301272 /* Group.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0D9CBC76261B6F1100301272 /* Group.swift */; };
@@ -30,6 +33,7 @@
 /* Begin PBXFileReference section */
 		0D3FE4E2261BB30100DE0EF4 /* GroupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupViewController.swift; sourceTree = "<group>"; };
 		0D5D0407261CF61600B6CC1A /* FavViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavViewController.swift; sourceTree = "<group>"; };
+		0D5D0411261CFDBE00B6CC1A /* ImageSliderController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageSliderController.swift; sourceTree = "<group>"; };
 		0D861BFF26170CFD00CAA986 /* SyncData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SyncData.swift; sourceTree = "<group>"; };
 		0D9CBC76261B6F1100301272 /* Group.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Group.swift; sourceTree = "<group>"; };
 		0DCB5EA2261644BF0065A9D0 /* PruebaSM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PruebaSM.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -51,10 +55,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				0D9CBC88261B77B100301272 /* RealmSwift in Frameworks */,
+				0D5D040D261CFD0600B6CC1A /* ImageSlideshow/Kingfisher in Frameworks */,
 				0D9CBC86261B77B100301272 /* Realm in Frameworks */,
 				0D861C0426170F0A00CAA986 /* SwiftyJSON in Frameworks */,
 				0DCB5EBC261647F60065A9D0 /* Alamofire in Frameworks */,
 				0DE6F04B261B8DA8000C4B5C /* Kingfisher in Frameworks */,
+				0D5D040F261CFD0600B6CC1A /* ImageSlideshow in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -118,6 +124,7 @@
 				0DCB5EA9261644BF0065A9D0 /* ViewController.swift */,
 				0D3FE4E2261BB30100DE0EF4 /* GroupViewController.swift */,
 				0D5D0407261CF61600B6CC1A /* FavViewController.swift */,
+				0D5D0411261CFDBE00B6CC1A /* ImageSliderController.swift */,
 			);
 			path = controllers;
 			sourceTree = "<group>";
@@ -152,6 +159,8 @@
 				0D9CBC85261B77B100301272 /* Realm */,
 				0D9CBC87261B77B100301272 /* RealmSwift */,
 				0DE6F04A261B8DA8000C4B5C /* Kingfisher */,
+				0D5D040C261CFD0600B6CC1A /* ImageSlideshow/Kingfisher */,
+				0D5D040E261CFD0600B6CC1A /* ImageSlideshow */,
 			);
 			productName = PruebaSM;
 			productReference = 0DCB5EA2261644BF0065A9D0 /* PruebaSM.app */;
@@ -185,6 +194,7 @@
 				0D861C0226170F0A00CAA986 /* XCRemoteSwiftPackageReference "SwiftyJSON" */,
 				0D9CBC84261B77B100301272 /* XCRemoteSwiftPackageReference "realm-cocoa" */,
 				0DE6F049261B8DA8000C4B5C /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				0D5D040B261CFD0600B6CC1A /* XCRemoteSwiftPackageReference "ImageSlideshow" */,
 			);
 			productRefGroup = 0DCB5EA3261644BF0065A9D0 /* Products */;
 			projectDirPath = "";
@@ -220,6 +230,7 @@
 				0DCB5EA8261644BF0065A9D0 /* SceneDelegate.swift in Sources */,
 				0DE6F046261B889D000C4B5C /* Extensions.swift in Sources */,
 				0DCB5EC326164B330065A9D0 /* MyCellController.swift in Sources */,
+				0D5D0412261CFDBE00B6CC1A /* ImageSliderController.swift in Sources */,
 				0DE6F04E261B9E25000C4B5C /* MyUIViewController.swift in Sources */,
 				0D5D0408261CF61600B6CC1A /* FavViewController.swift in Sources */,
 				0D9CBC77261B6F1100301272 /* Group.swift in Sources */,
@@ -426,6 +437,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		0D5D040B261CFD0600B6CC1A /* XCRemoteSwiftPackageReference "ImageSlideshow" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/zvonicek/ImageSlideshow";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 1.9.2;
+			};
+		};
 		0D861C0226170F0A00CAA986 /* XCRemoteSwiftPackageReference "SwiftyJSON" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/SwiftyJSON/SwiftyJSON";
@@ -455,12 +474,22 @@
 			repositoryURL = "https://github.com/onevcat/Kingfisher";
 			requirement = {
 				kind = upToNextMajorVersion;
-				minimumVersion = 6.2.1;
+				minimumVersion = 5.8.0;
 			};
 		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		0D5D040C261CFD0600B6CC1A /* ImageSlideshow/Kingfisher */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D5D040B261CFD0600B6CC1A /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow/Kingfisher;
+		};
+		0D5D040E261CFD0600B6CC1A /* ImageSlideshow */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 0D5D040B261CFD0600B6CC1A /* XCRemoteSwiftPackageReference "ImageSlideshow" */;
+			productName = ImageSlideshow;
+		};
 		0D861C0326170F0A00CAA986 /* SwiftyJSON */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 0D861C0226170F0A00CAA986 /* XCRemoteSwiftPackageReference "SwiftyJSON" */;

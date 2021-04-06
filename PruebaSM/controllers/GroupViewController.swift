@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 import RealmSwift
 
+// Controlador detalles categoria
 class GroupViewController: MyUIViewController {
     
     @IBOutlet weak var ivBackground: UIImageView!
@@ -18,6 +19,7 @@ class GroupViewController: MyUIViewController {
     @IBOutlet weak var lblFecha: UILabel!
     @IBOutlet weak var lblShortDescription: UILabel!
     @IBOutlet weak var btnLikeOff: UIButton!
+    @IBOutlet weak var viewImage: UIView!
     
     var group: Group?
 
@@ -41,8 +43,24 @@ class GroupViewController: MyUIViewController {
             }
             
             toggleLike(group: g)
-
- 
+        }
+        
+        let tapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(imageTapped(tapGestureRecognizer:)))
+        viewImage.isUserInteractionEnabled = true
+        viewImage.addGestureRecognizer(tapGestureRecognizer)
+    }
+    
+    @objc func imageTapped(tapGestureRecognizer: UITapGestureRecognizer) {
+        let tappedImage = tapGestureRecognizer.view as! UIView
+        
+        self.performSegue(withIdentifier: "GO_MEDIA_CONTROLLER", sender:self)
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "GO_MEDIA_CONTROLLER" {
+            if let destinationVC = segue.destination as? ImageSliderController {
+                destinationVC.groupId = group!.id
+            }
         }
     }
     
@@ -51,6 +69,7 @@ class GroupViewController: MyUIViewController {
         btnLikeOff.isHidden = group.saved
 
     }
+    
     @IBAction func doLike(_ sender: Any) {
         let realm = try! Realm()
         
@@ -60,6 +79,6 @@ class GroupViewController: MyUIViewController {
                     item.saved = !item.saved
                     toggleLike(group: item)
                 }
-            }
         }
+    }
 }

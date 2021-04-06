@@ -7,6 +7,7 @@
 
 import UIKit
 
+// Clase base, de la cual extenderan el resto.
 class MyUIViewController: UIViewController {
     var loadingDialog: UIAlertController?
     

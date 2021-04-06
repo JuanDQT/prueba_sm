@@ -276,22 +276,40 @@
                         <outlet property="lblName" destination="d5q-GS-eM2" id="x5x-km-ft0"/>
                         <outlet property="lblShortDescription" destination="Dhf-xI-Lax" id="Cpp-gy-VNE"/>
                         <outlet property="tvDescription" destination="zyq-ne-ZMj" id="AMe-dK-oqu"/>
+                        <outlet property="viewImage" destination="1BU-u1-HLd" id="XQE-sE-r8a"/>
+                        <segue destination="jF4-zR-Vnj" kind="show" identifier="GO_MEDIA_CONTROLLER" id="Ujk-C9-O87"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="8sS-UN-aPi" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1721.7391304347827" y="918.75"/>
         </scene>
-        <!--View Controller-->
+        <!--Image Slider Controller-->
         <scene sceneID="ehy-oF-lTn">
             <objects>
-                <viewController id="jF4-zR-Vnj" sceneMemberID="viewController">
+                <viewController id="jF4-zR-Vnj" customClass="ImageSliderController" customModule="PruebaSM" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="C9D-8Y-Hj7">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YtW-zR-TqC" customClass="ImageSlideshow" customModule="ImageSlideshow">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                                <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </view>
+                        </subviews>
                         <viewLayoutGuide key="safeArea" id="9nB-ob-dBt"/>
-                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <color key="backgroundColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="9nB-ob-dBt" firstAttribute="trailing" secondItem="YtW-zR-TqC" secondAttribute="trailing" id="AMo-V4-3Lw"/>
+                            <constraint firstItem="YtW-zR-TqC" firstAttribute="leading" secondItem="9nB-ob-dBt" secondAttribute="leading" id="Mbf-rs-h0r"/>
+                            <constraint firstItem="9nB-ob-dBt" firstAttribute="bottom" secondItem="YtW-zR-TqC" secondAttribute="bottom" id="cXb-9N-8RA"/>
+                            <constraint firstItem="YtW-zR-TqC" firstAttribute="top" secondItem="9nB-ob-dBt" secondAttribute="top" id="hTS-Ss-PqQ"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" id="BPk-CR-Cme"/>
+                    <connections>
+                        <outlet property="slider" destination="YtW-zR-TqC" id="4Y8-mn-54G"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2Gf-OO-Vfb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>

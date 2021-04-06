@@ -9,16 +9,15 @@ import UIKit
 import SwiftyJSON
 import Alamofire
 import RealmSwift
+import ImageSlideshowKingfisher
 
 class SyncData {
-    
     let BASE_URL = "https://practica-slashmobility.firebaseio.com"
     let GET_GROUPS = "/groups.json"
+    let GET_IMAGES = "/images/xxx.json" // xxx: parametrizable
 
+    // Recogemos todos los grupos
     func getGroups() {
-
-        // Peticion al servidor, json model
-
         AF.request(BASE_URL + GET_GROUPS, method: .get).responseDecodable(of: [Group].self) {
             response in
             
@@ -40,55 +39,36 @@ class SyncData {
             if items.count > 0 {
                 NotificationCenter.default.post(name: Notification.Name(rawValue: "GET_GROUPS"), object: nil, userInfo: ["items": items])
             }
-
         }
     }
     
+    // Buscamos las imagenes
+    func getMedia(_ groupId: Int) {
+        AF.request(BASE_URL + GET_IMAGES.replacingOccurrences(of: "xxx", with: "\(groupId)"), method: .get).responseJSON {
+            response in
+            
+            switch response.result{
+                case .success(let value):
+                    
+                    if let images = value as? [String], images.count > 0 {
+                        var items: [KingfisherSource] = []
+                        for res in images {
+                            items.append(KingfisherSource(urlString: res)!)
+                        }
+                        NotificationCenter.default.post(name: Notification.Name(rawValue: "GET_IMAGES"), object: nil, userInfo: ["items": items])
+                    }
+                case .failure(let error):
+                    print(error.localizedDescription)
+
+            }
+        }
+    }
+    
+    // Buscamos los guardados
     func getFavs() {
         let realm = try! Realm()
         
         let items = realm.objects(Group.self).filter("saved = %@", 1)
         NotificationCenter.default.post(name: Notification.Name(rawValue: "GET_FAVS"), object: nil, userInfo: ["items": Array(items)])
     }
-
-    /*
-    func getTeamById(id: String, completion: @escaping(Team) -> Void) {
-        dataTask?.cancel()
-            
-        if var urlComponents = URLComponents(string: BASE_URL + "teams/\(id)?api_token=\(API_TOKEN)") {
-
-            guard let url = urlComponents.url else {
-                return
-            }
-          
-            print(url)
-            dataTask = defaultSession.dataTask(with: url) { [weak self] data, response, error in defer {
-              self?.dataTask = nil
-            }
-
-            let outputStr = String(data: data!, encoding: String.Encoding.utf8) as! String
-            print(outputStr)
-
-            // TODO: verificar porque arroja error.
-            if let _ = error {
-              //print(e.localizedDescription)
-            } else if let data = data, let response = response as? HTTPURLResponse, response.statusCode == 200 {
-                
-                do {
-                    let json = try JSON(data: data)
-                    let jsonData = json["data"]
-                    let player: Team = try JSONDecoder().decode(Team.self, from: (jsonData.rawString()?.data(using: .utf8))!)
-                    print(player)
-                    completion(player)
-                } catch {
-                    print(error.localizedDescription)
-                }
-            }
-          }
-            dataTask?.resume()
-        }
-    }
-    */
-    
-
 }
