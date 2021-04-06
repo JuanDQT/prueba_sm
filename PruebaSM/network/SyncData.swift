@@ -43,6 +43,13 @@ class SyncData {
 
         }
     }
+    
+    func getFavs() {
+        let realm = try! Realm()
+        
+        let items = realm.objects(Group.self).filter("saved = %@", 1)
+        NotificationCenter.default.post(name: Notification.Name(rawValue: "GET_FAVS"), object: nil, userInfo: ["items": Array(items)])
+    }
 
     /*
     func getTeamById(id: String, completion: @escaping(Team) -> Void) {

@@ -39,22 +39,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "F597B262-E737-46A8-99B4-36C7BAB4B90C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "PruebaSM/controllers/ViewController.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "44"
-            endingLineNumber = "44"
-            landmarkName = "doRefresh(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "8082257E-DC46-4F95-892C-FF40E7F41E31"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -62,8 +46,8 @@
             filePath = "PruebaSM/controllers/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "81"
-            endingLineNumber = "81"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -94,8 +78,8 @@
             filePath = "PruebaSM/controllers/ViewController.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "33"
-            endingLineNumber = "33"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
             landmarkName = "responseGroups(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -148,7 +132,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "88430F63-FE52-4BF5-9BC8-57CBAF1D8D08 - 807d7f5dd5896d27"
+                  uuid = "88430F63-FE52-4BF5-9BC8-57CBAF1D8D08 - 807d7f5dd5896e19"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -158,12 +142,12 @@
                   urlString = "file:///Users/juan/AppProjects/iOSProjects/PruebaSM/PruebaSM/controllers/GroupViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "65"
-                  endingLineNumber = "65"
+                  startingLineNumber = "59"
+                  endingLineNumber = "59"
                   offsetFromSymbolStart = "851">
                </Location>
                <Location
-                  uuid = "88430F63-FE52-4BF5-9BC8-57CBAF1D8D08 - 20e1fffc93ddb9ca"
+                  uuid = "88430F63-FE52-4BF5-9BC8-57CBAF1D8D08 - 20e1fffc93ddbab4"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -173,8 +157,8 @@
                   urlString = "file:///Users/juan/AppProjects/iOSProjects/PruebaSM/PruebaSM/controllers/GroupViewController.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "66"
-                  endingLineNumber = "66"
+                  startingLineNumber = "60"
+                  endingLineNumber = "60"
                   offsetFromSymbolStart = "34">
                </Location>
             </Locations>
@@ -321,6 +305,102 @@
             startingLineNumber = "23"
             endingLineNumber = "23"
             landmarkName = "getGroups()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A359681C-E898-461D-BE86-1E34F077A711"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaSM/controllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "787E5DCC-88E7-40A2-B26B-7F9744E17056"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaSM/controllers/ViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
+            landmarkName = "responseGroups(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "787E5DCC-88E7-40A2-B26B-7F9744E17056 - 12e8e5cbdeb33ba0"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "PruebaSM.ViewController.responseGroups(Foundation.Notification) -&gt; ()"
+                  moduleName = "PruebaSM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan/AppProjects/iOSProjects/PruebaSM/PruebaSM/controllers/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "1092">
+               </Location>
+               <Location
+                  uuid = "787E5DCC-88E7-40A2-B26B-7F9744E17056 - 9f2db6e8abd214f5"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 () -&gt; () in PruebaSM.ViewController.responseGroups(Foundation.Notification) -&gt; ()"
+                  moduleName = "PruebaSM"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/juan/AppProjects/iOSProjects/PruebaSM/PruebaSM/controllers/ViewController.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "37"
+                  endingLineNumber = "37"
+                  offsetFromSymbolStart = "87">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "FDD4EB8D-A4FC-4E8D-82E9-B00D94611030"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaSM/network/SyncData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
+            landmarkName = "getFavs()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5D989671-80D8-40CC-A6D8-E4311CF66D5C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "PruebaSM/controllers/FavViewController.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "responseGroups(_:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

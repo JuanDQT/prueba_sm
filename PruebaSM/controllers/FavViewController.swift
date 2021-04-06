@@ -8,7 +8,7 @@
 import UIKit
 import Kingfisher
 
-class ViewController: MyUIViewController {
+class FavViewController: MyUIViewController, UITableViewDelegate {
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var lblNoData: UILabel!
     
@@ -20,7 +20,7 @@ class ViewController: MyUIViewController {
         tableView.delegate = self
         tableView.dataSource = self
         
-        NotificationCenter.default.addObserver(self, selector: #selector(responseGroups(_:)), name: Notification.Name(rawValue: "GET_GROUPS"), object: nil)
+        NotificationCenter.default.addObserver(self, selector: #selector(responseGroups(_:)), name: Notification.Name(rawValue: "GET_FAVS"), object: nil)
         
         doRefresh((Any).self)
         
@@ -40,25 +40,14 @@ class ViewController: MyUIViewController {
     }
     
     @IBAction func doRefresh(_ sender: Any) {
-        if(!isConnectedToInternet()) {return}
-
-        showLoadingAlert(value: true)
-        SyncData().getGroups()
-    }
-    
-    // MARK: Prepare to go next controller
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if(segue.identifier == "GO_GROUP_CONTROLLER") {
-            let controller = segue.destination as! GroupViewController
-            controller.group = sender as? Group
-        }
+        SyncData().getFavs()
     }
 }
 
 
 
 // MARK: - Extensions, Delegates
-extension ViewController: UITableViewDataSource {
+extension FavViewController: UITableViewDataSource {
 
   func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
     
@@ -92,12 +81,3 @@ extension ViewController: UITableViewDataSource {
     }
 }
 
-extension ViewController: UITableViewDelegate {
-  func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-
-    if let items = dataList {
-        performSegue(withIdentifier: "GO_GROUP_CONTROLLER", sender: dataList![indexPath.row])
-
-    }
-  }
-}
