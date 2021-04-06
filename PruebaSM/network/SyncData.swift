@@ -8,6 +8,7 @@
 import UIKit
 import SwiftyJSON
 import Alamofire
+import RealmSwift
 
 class SyncData {
     
@@ -25,7 +26,20 @@ class SyncData {
                 NotificationCenter.default.post(name: Notification.Name(rawValue: "ERROR_NETWORK"), object: nil, userInfo: nil)
                 return
             }
-            NotificationCenter.default.post(name: Notification.Name(rawValue: "GET_GROUPS"), object: nil, userInfo: ["items": groups])
+            
+            let realm = try! Realm()
+
+            try! realm.write {
+                for item in groups {
+                    realm.add(item, update: .modified)
+                }
+            }
+            
+            let items = Array(realm.objects(Group.self))
+            
+            if items.count > 0 {
+                NotificationCenter.default.post(name: Notification.Name(rawValue: "GET_GROUPS"), object: nil, userInfo: ["items": items])
+            }
 
         }
     }
