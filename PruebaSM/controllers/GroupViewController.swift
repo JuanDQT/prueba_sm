@@ -35,9 +35,9 @@ class GroupViewController: MyUIViewController {
             lblName.text = g.name
             let date = g.date.toStringDate()
             lblFecha.text = date
-            if let description = g.descriptionLong {
-                tvDescription.text = description
-            }
+ 
+            tvDescription.text = g.descriptionLong
+
             if let shortDescription = g.descriptionShort {
                 lblShortDescription.text = shortDescription
             }

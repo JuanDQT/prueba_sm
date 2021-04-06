@@ -20,7 +20,7 @@ import Realm
     @objc dynamic var saved: Bool = false
     
     enum CodingKeys: String, CodingKey {
-            case id, name, date, defaultImageUrl, descriptionLong, descriptionShort
+            case id, name, date, defaultImageUrl, descriptionLong = "description", descriptionShort
         }
     
     override class func primaryKey() -> String? {
